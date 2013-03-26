@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, Home!</string>
+    <string name="app_name">Who Said What When</string>
+    <string name="topic">Topics</string>
+    <string name="person">Politicians</string>
+    <string name="quotebyperson">Quotes By Person</string>
+    <string name="name">Name</string>
+    <string name="shortbio">Short Bio</string>
+    <string name="affiliation">Affiliation</string>
+    <string name="date">Date</string>
+    <string name="quote">Quotes</string>
+    <string name="source">Source</string>
+    <string name="share">Share with Friends</string>
+    <string name="viewmore">View More</string>
+    <string name="articletitle">Article Title</string>
+    <string name="fullbio">Full Bio</string>
+    <string name="group">Group by Candidates</string>
+    <string name="noquotes">No Quotes Yet</string>
+    <string name="titlecaption">Politicians and their Quotes</string>
+    <string name="racefor">Racefor</string>
+    <string name="share_with_friends">Share with Friends</string>
+    <string name="all_quotes">All</string>
+    <string name="by_topic">By Topic</string>
+    <string name="politician_image">Candidate Image</string>
+    <string name="small_text">Small Text</string>
+
+</resources>

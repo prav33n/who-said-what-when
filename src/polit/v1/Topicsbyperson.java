@@ -36,24 +36,23 @@ public class Topicsbyperson extends Activity {
 		    setTitleColor(getResources().getColor(R.color.independent));
 	        
 	        query ="select topicid,count(*) from topicquote where quoteid in (select _id from quote where personid ="+id+") and deleted = 0 group by topicid";
-	        Cursor cur = db.query(query);
-	    	startManagingCursor(cur);
-		    cur.moveToFirst();
-		    Log.e("cursor Count",""+cur.getColumnCount()); //load sound filenames to the spinner
+	        Cursor cursor = db.query(query);
+	    	startManagingCursor(cursor);
+	    	cursor.moveToFirst();
+		    Log.e("cursor Count",""+cursor.getColumnCount()); //load sound filenames to the spinner
 	        topicid=new ArrayList<Integer>();
 	        count=new ArrayList<Integer>();
-	        while (!cur.isAfterLast()) {
-				topicid.add(cur.getInt(0));
-				count.add(cur.getInt(1));
-				cur.moveToNext();
+	        while (!cursor.isAfterLast()) {
+				topicid.add(cursor.getInt(0));
+				count.add(cursor.getInt(1));
+				cursor.moveToNext();
 				}
-			cur.close();
 					
 			String topic = topicid.toString();
 		    topic.substring(1, topic.length()-1);
 			query = "select _id,topic from topic where _id in ("+topic.substring(1, topic.length()-1)+") and deleted = 0 order by topic";
 			Log.e("logged data",topic+"//"+count.toString()+"//"+query);
-			cur = db.query(query);
+			Cursor cur = db.query(query);
 	    	startManagingCursor(cur);
 		    cur.moveToFirst();
 		    SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, R.layout.topicsbyperson, cur, new String[] {"topic","_id"}, 

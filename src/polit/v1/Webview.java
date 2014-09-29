@@ -1,12 +1,10 @@
 package polit.v1;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.webkit.WebView;
 
-@SuppressLint("SetJavaScriptEnabled")
 public class Webview extends Activity {
 	WebView webview;
 	final Activity activity = this;
@@ -16,7 +14,7 @@ public class Webview extends Activity {
 	     setContentView(R.layout.webview);
 		 webview = (WebView)findViewById(R.id.webview);
 		 webview.getSettings().setJavaScriptEnabled(true);
-		 webview.getSettings().setPluginsEnabled(true);
+		 //webview.getSettings().setPluginsEnabled(true);
 		 Bundle bundle = getIntent().getExtras() ;
 		 String url = bundle.getString("url");
 		 String viewtype = bundle.getString("viewtype");

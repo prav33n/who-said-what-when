@@ -58,7 +58,7 @@ public class Quotes extends Activity {
      	cur.moveToFirst();
      	Log.e("data logged",""+cur.getColumnCount()+cur.getColumnIndex("topic")+"//"+query);
      	topic = cur.getString(0);
-     	cur.close();
+     	//cur.close();
      	query = "select firstname,lastname,politicalaffiliation from person where _id = "+msg.getInt("personid")+" and deleted = 0";
         cur = db.query(query);
      	startManagingCursor(cur);
@@ -70,7 +70,7 @@ public class Quotes extends Activity {
      	    setTitleColor(getResources().getColor(R.color.democrate));
      	    else if(cur.getString(cur.getColumnIndex("politicalaffiliation")).equalsIgnoreCase("Independent"))
      	    setTitleColor(getResources().getColor(R.color.independent));
-     	cur.close();
+     	//cur.close();
   		setTitle(candidatename+" on "+topic);
   		query = "select * from quote where _id in (select quoteid from topicquote where topicid = "+topicid+") and personid ="+msg.getInt("personid")+" and deleted = 0 order by pubdate desc";
   		}

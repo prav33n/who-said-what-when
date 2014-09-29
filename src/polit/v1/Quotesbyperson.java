@@ -33,7 +33,7 @@ public class Quotesbyperson extends Baseclass{
 	    	startManagingCursor(cur);
 		    cur.moveToFirst();
 	        setTitle(cur.getString(0));
-	        cur.close();
+	        //cur.close();
 	        ListView list = (ListView)findViewById(R.id.tplist);
 	        query ="select personid,count(*) from quote where _id in (select quoteid from topicquote where topicid ="+id+") and deleted = 0 group by personid";
 	        cur = db.query(query);
@@ -47,7 +47,6 @@ public class Quotesbyperson extends Baseclass{
 				count.add(cur.getInt(1));
 				cur.moveToNext();
 				}
-			cur.close();
 					
 			String person = personid.toString();
 			person.replace("[", "(");

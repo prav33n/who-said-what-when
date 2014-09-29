@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/ccandidates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="3dp"
+        android:background="@drawable/border"
+        android:padding="5dp" >
+
+        <ImageView
+            android:id="@+id/cpicturefilename"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_margin="3dp"
+            android:contentDescription="@string/politician_image"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/cname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/cpicturefilename"
+            android:layout_margin="3dp"
+            android:layout_toRightOf="@+id/cpicturefilename"
+            android:text="@string/name"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="22dp" />
+
+        <TextView
+            android:id="@+id/caffiliation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/cname"
+            android:layout_below="@+id/cname"
+            android:layout_margin="2dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/affiliation"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/cshortbio"
+            style="@style/TextBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/cpicturefilename"
+            android:layout_margin="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/shortbio"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="14dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/crace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/caffiliation"
+            android:layout_below="@+id/caffiliation"
+            android:layout_margin="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:text="@string/racefor"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="14dp" />
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/clist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ads"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:divider="@color/background1"
+        android:visibility="visible" >
+
+    </ListView>
+    <RelativeLayout
+        android:id="@+id/ads"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:background= "@android:color/transparent"  >
+    </RelativeLayout>
+
+</RelativeLayout>

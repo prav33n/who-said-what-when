@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/hcandidate"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/title_button"
+        android:ellipsize="middle"
+        android:onClick="homecandidate"
+        android:text="@string/person"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/htopic"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/hcandidate"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/title_button"
+        android:ellipsize="middle"
+        android:onClick="hometopic"
+        android:text="@string/quote"
+        android:textSize="30dp"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/hshare"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/htopic"
+        android:background="@drawable/title_button"
+        android:onClick="shareapp"
+        android:text="@string/share_with_friends"
+        android:textSize="20dp" 
+        android:layout_marginTop="5dp"/>
+    
+    <RelativeLayout
+        android:id="@+id/ads"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:background= "@android:color/transparent"  >
+
+    </RelativeLayout>
+
+</RelativeLayout>
